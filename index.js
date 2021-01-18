@@ -107,6 +107,13 @@ sendBtn.addEventListener("click", () => {
   operation();
 });
 
+//0~9
+let display0to9 = ``;
+for (let i = 0; i < 10; i++) {
+  display0to9 += `<a class="number d-flex justify-content-center align-items-center m-1">${i} </a>`;
+}
+slr(".numbersClick").innerHTML = display0to9;
+
 const selectToggle = (e) => {
   e.target.classList[5] == "numberClick"
     ? e.target.classList.remove("numberClick")
@@ -134,3 +141,5 @@ document.querySelectorAll(".number").forEach((element) => {
 //         }
 //     }
 // }
+
+
